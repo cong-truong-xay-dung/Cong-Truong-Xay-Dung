@@ -1,0 +1,255 @@
+#VRML V2.0 utf8
+
+Background {
+	skyAngle [ 0.1, 0.1, 0.2, 1.4, 1.7 ]	
+	skyColor [ 1 0 0, .9 .9 .5, .7 .7 .9, 0 0.4 1, 0 0.7 1,0.1 0.6 0 ]		
+}
+NavigationInfo {
+	avatarSize [1 1 2]
+}
+#Cong vao
+Transform {
+	translation	0 -4 0
+	children [Shape {appearance Appearance {material Material {diffuseColor 0 1 0}}
+			geometry Box {size 20 4 0.1}
+		}]
+}
+Transform {	  translation	-7 -4.3 0.2
+	children [
+		Shape {appearance Appearance {material DEF TEXT Material {diffuseColor 1 0 0
+					ambientIntensity 1.0
+					specularColor 0 0 0
+					shininess 0.145
+					transparency 0}}
+			geometry Text {string "CÔNG TRƯỜNG XÂY DỰNG"
+				fontStyle FontStyle {size 1.35 family ".VN-avo"style "BOLD"}
+			}
+		}
+	]
+}
+Transform {
+	translation	-10 -8.8 0
+	children [Shape {appearance Appearance {material Material {}
+				texture ImageTexture {url "thep.jpg"}}
+			geometry Cylinder {radius 0.1
+				height 14}
+		}]
+}
+Transform {
+	translation	10 -8.8 0
+	children [Shape {appearance Appearance {material Material {}
+				texture ImageTexture {url "thep.jpg"}}
+			geometry Cylinder {radius 0.1
+				height 14}
+		}]
+}
+#End Cong Vao
+#Tuong bao, Nen
+Transform {
+	translation	30 -12.6 0
+	children [
+		Shape {	 appearance	Appearance {material Material {}
+				texture ImageTexture {url "tuongbao.jpg"}}
+			geometry Box { size 40 6 0.2 }
+		}
+	]
+}
+Transform {
+	translation	-30 -12.6 0
+	children [
+		Shape {	 appearance	Appearance {material Material {}
+				texture ImageTexture {url "tuongbao.jpg"}}
+			geometry Box { size 40 6 0.2 }
+		}
+	]
+}
+Transform {
+	translation	50 -12.6 -50
+	children [
+		Shape {	 appearance	Appearance {material Material {}
+				texture ImageTexture {url "tuongbao.jpg"}}
+			geometry Box { size 0.2 6 100 }
+		}
+	]
+}
+Transform {
+	translation	-50 -12.6 -50
+	children [
+		Shape {	 appearance	Appearance {material Material {}
+				texture ImageTexture {url "tuongbao.jpg"}}
+			geometry Box { size 0.2 6 100 }
+		}
+	]
+}
+Transform {
+	translation	0 -12.6 -100
+	children [
+		Shape {	 appearance	Appearance {material Material {}
+				texture ImageTexture {url "tuongbao.jpg"}}
+			geometry Box { size 100 6 0.2 }
+		}
+	]
+}
+Transform {
+	translation	0 -15.5 -50
+	children [
+		PointLight {
+			location 0 0 0
+			radius 100
+			ambientIntensity 1.0
+		}
+		Shape {appearance Appearance {material Material {}
+				texture ImageTexture {url "be_tong.jpg"}}
+			geometry Box {size 100 0.2 100}
+		}
+	]
+}
+#End Tuong bao, Nen
+#View
+DEF Cam1 Viewpoint {
+	position 0 -10 20
+	orientation 0 1 0 0
+	fieldOfView 1.5
+	description "Phía trước"
+	jump TRUE
+}
+DEF Cam2 Viewpoint {
+	position 65 -7 -50
+	orientation 0 1 0 1.57
+	fieldOfView 1.5
+	description "Bên phải"
+	jump TRUE
+}
+DEF Cam3 Viewpoint {
+	position 0 0 -120
+	orientation 0 1 0 3.14
+	fieldOfView 1.5
+	description "Phía sau"
+	jump TRUE
+}
+DEF Cam4 Viewpoint {
+	position -65 -7 -50
+	orientation 0 1 0 -1.57
+	fieldOfView 1.5
+	description "Bên trái"
+	jump TRUE
+}
+DEF Cam5 Viewpoint {
+	position 0 45 -50
+	orientation 1 0 0 -1.57
+	fieldOfView 1.5
+	description "Trên xuống"
+	jump TRUE
+} 
+#End View
+
+#Bên trong
+Transform {	   #Tòa nhà
+	children [
+		Transform {translation -3 6.35 -50
+			scale 0.7 0.7 0.7
+			children [Inline {url ["toanha.wrl"]}]
+		}
+	]
+}
+Transform {		#Phòng bảo vệ
+	rotation 0 1 0 3.14
+	translation	37 -11 -12
+	scale 3 3 3
+	children [Inline {url ["./phòng bảo vệ/phong_bao_ve.wrl"]}]
+}
+Transform {		#Cột cờ
+	translation	38 -15 -20
+	scale 4 4 4
+	children [Inline {url ["./cột cờ/cot_co.wrl"]}]
+}
+Transform {		#Gạch
+	rotation 0 1 0 1.57
+	translation	43 -12 -74
+	scale 1.5 1.5 1.5
+	children [Inline {url ["./gạch/gach.wrl"]}]
+}
+Transform {		#Ít Gạch
+	rotation 0 1 0 1.57
+	translation	40 -15 -27
+	scale 1 1 1
+	children [Inline {url ["./gạch/it-gach.wrl"]}]
+}
+Transform {		#Sắt
+	rotation 0 1 0 1.57
+	translation	-23 -15.2 -96
+	scale 6.5 6.5 6.5
+	children [Inline {url ["./đống sắt/dong-sat.wrl"]}]
+}
+Transform {		#Cát
+	rotation 0 0 1 0
+	translation	-47.6 -15.2 -22
+	scale .8 1 .8
+	children [Inline {url ["./đống cát/dongcat.wrl"]}]
+}
+Transform {		#Kho xi măng
+	rotation 0 1 0 1.57
+	translation	-44.4 -15 -50
+	scale 2.5 2.5 2.5
+	children [Inline {url ["./kho xi măng/kho_xi_mang.wrl"]}]
+}
+Transform {		#Hàng xe rùa   
+	children [	  
+		DEF xerua Transform {	 rotation 0 1 0 1.57
+			translation	7 -14.36 -96 
+			children [Inline {url ["./Xe rua/xerua.wrl"]}]}
+		Transform {translation 2.2 0 0
+			children [USE xerua ]}
+		Transform {translation 2.2 0 0
+			children [USE xerua ]}
+		Transform {translation 4.4 0 0
+			children [USE xerua ]}
+		Transform {translation 6.6 0 0
+			children [USE xerua ]}
+		Transform {translation 8.8 0 0
+			children [USE xerua ]}
+		Transform {translation 11 0 0
+			children [USE xerua ]}
+		Transform {translation 13.2 0 0
+			children [USE xerua ]}
+		Transform {translation 15.4 0 0
+			children [USE xerua ]}
+		Transform {translation 17.6 0 0
+			children [USE xerua ]}
+		Transform {translation 19.8 0 0
+			children [USE xerua ]}
+	]
+}
+Transform {		#Xe trộn bê tông
+	translation	-30 -14.3 -20
+	scale .9 .9 .9
+	children [Inline {url ["./Xe tron be tong/maytronbetong.wrl"]}]
+}
+Transform {		#Cần cẩu
+	rotation 0 1 0 -1.57
+	translation	-33 -12.1 -80  
+	children [Inline {url ["./Cần cẩu/cancau.wrl"]}]
+}
+Transform {		#Xe lu
+	translation	15 -12.3 -85
+	scale 1 1 1
+	children [Inline {url ["./Xe lu/xelu.wrl"]}]
+}
+Transform {		#Xe ủi
+	translation	35 -12.3 -55
+	rotation 0 1 0 1.57
+	scale 1 1 1
+	children [Inline {url ["./Xe ui/xeui.wrl"]}]
+}
+DEF congnhan Transform {		#Công nhân
+	translation	40 -10.7 -31
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan.wrl"]}]
+}	  
+Transform {		#Bảo vệ
+	translation	-10 -10.8 -8
+	rotation 0 1 0 -1.57
+	scale 3 3 3
+	children [Inline {url ["./người/BaoVe.wrl"]}]
+}
+#end Bên trong
