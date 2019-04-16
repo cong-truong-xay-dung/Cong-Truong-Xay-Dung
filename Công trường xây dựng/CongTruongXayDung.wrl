@@ -5,7 +5,7 @@ Background {
 	skyColor [ 1 0 0, .9 .9 .5, .7 .7 .9, 0 0.4 1, 0 0.7 1,0.1 0.6 0 ]		
 }
 NavigationInfo {
-	avatarSize [1 1 2]
+	avatarSize [1 1.8 2.3]
 }
 #Cong vao
 Transform {
@@ -135,7 +135,7 @@ DEF Cam4 Viewpoint {
 	jump TRUE
 }
 DEF Cam5 Viewpoint {
-	position 0 45 -50
+	position 0 60 -50
 	orientation 1 0 0 -1.57
 	fieldOfView 1.5
 	description "Trên xuống"
@@ -146,8 +146,8 @@ DEF Cam5 Viewpoint {
 #Bên trong
 Transform {	   #Tòa nhà
 	children [
-		Transform {translation -3 6.35 -50
-			scale 0.7 0.7 0.7
+		Transform {translation -3 21.1 -50
+			scale 0.7 1.2 0.7
 			children [Inline {url ["toanha.wrl"]}]
 		}
 	]
