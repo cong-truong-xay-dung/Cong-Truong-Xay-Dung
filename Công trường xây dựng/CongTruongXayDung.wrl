@@ -232,8 +232,9 @@ Transform {		#Cần cẩu
 }
 Transform {		#Xe lu
 	translation	15 -12.3 -85
+	rotation 0 1 0 1.57
 	scale 1 1 1
-	children [Inline {url ["./Xe lu/xelu.wrl"]}]
+	children [Inline {url ["./Xe lu/cdXeLu.wrl"]}]
 }
 Transform {		#Xe ủi
 	translation	35 -12.3 -55
