@@ -236,6 +236,7 @@ Transform {		#Xe lu
 	rotation 0 1 0 1.57
 	scale 1 1 1
 	children [Inline {url ["./Xe lu/XeLu.wrl"]}]
+	children [Inline {url ["./Xe lu/cdXeLu.wrl"]}]
 }
 Transform {		#Xe ủi
 	translation	35 -12.3 -45
