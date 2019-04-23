@@ -535,7 +535,7 @@ DEF tgdcqd TimeSensor {
 #quãng đường người di chuyển 
 DEF qddc PositionInterpolator {
 	key [0 0.5  1]
-	keyValue [0 0 -11, 0 0 0, 0 0 -11]
+	keyValue [0 0 -14, 0 0 0, 0 0 -14]
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO baoVe.set_translation 
