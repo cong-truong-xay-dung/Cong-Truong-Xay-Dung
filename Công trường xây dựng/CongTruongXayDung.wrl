@@ -187,11 +187,23 @@ Transform {		#Cát
 	scale .8 1 .8
 	children [Inline {url ["./đống cát/dongcat.wrl"]}]
 }
+Transform {		#Đá
+	rotation 0 0 1 0
+	translation	-57.9 -15.2 -90
+	scale .8 1 .8
+	children [Inline {url ["./đống đá/dongda.wrl"]}]
+}
 Transform {		#Kho xi măng
 	rotation 0 1 0 1.57
 	translation	-54.4 -15 -50
 	scale 2.5 2.5 2.5
 	children [Inline {url ["./kho xi măng/kho_xi_mang.wrl"]}]
+}
+Transform {		#Một ít xi măng
+	rotation 0 1 0 1.57
+	translation	-12 -14.5 -73
+	scale 2.5 2.5 2.5
+	children [Inline {url ["./kho xi măng/mot-it-ximang.wrl"]}]
 }
 Transform {		#Hàng xe rùa   
 	children [	  
@@ -230,8 +242,7 @@ Transform {		#Cần cẩu
 	translation	-33 -12.1 -80  
 	children [Inline {url ["./Cần cẩu/cancau.wrl"]}]
 }
-Transform {		#Xe lu
-	translation	10 -12.3 -85
+Transform {		#Xe lu			
 	translation	15 -12.3 -85
 	rotation 0 1 0 1.57
 	scale 1 1 1
