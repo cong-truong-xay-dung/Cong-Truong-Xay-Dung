@@ -284,4 +284,9 @@ Transform {		#Bảo vệ
 	scale 3 3 3
 	children [Inline {url ["./người/BaoVe.wrl"]}]
 }
+Transform {		#Công nhân chuyển gạch
+	translation	0 -10.7 -10
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan.wrl"]}]
+}
 #end Bên trong
