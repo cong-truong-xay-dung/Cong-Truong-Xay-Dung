@@ -1,4 +1,4 @@
-﻿#VRML V2.0 utf8
+#VRML V2.0 utf8
 
 Background {
 	skyAngle [ 0.1, 0.1, 0.2, 1.4, 1.7 ]	
@@ -243,6 +243,12 @@ Transform {		#Xe ủi
 	rotation 0 1 0 1.57
 	scale 1 1 1
 	children [Inline {url ["./Xe ui/xeui.wrl"]}]
+}
+Transform {		#Cần trục
+	translation	23 -14.5 -45
+	rotation 0 1 0 -1.57
+	scale 1.5 1.5 1.5
+	children [Inline {url ["./cần trục/cantruc.wrl"]}]
 }
 Transform {		#Công nhân
 	translation	45 -10.7 -33
