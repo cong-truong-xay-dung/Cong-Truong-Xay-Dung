@@ -244,6 +244,12 @@ Transform {		#Xe ủi
 	scale 1 1 1
 	children [Inline {url ["./Xe ui/xeui.wrl"]}]
 }
+Transform {		#Xe tải
+	translation	-30 -14.3 -5
+	rotation 0 1 0 0
+	scale 1 1 1
+	children [Inline {url ["./Xe tai/dcxetai.wrl"]}]
+}
 Transform {		#Cần trục
 	translation	23 -14.5 -45
 	rotation 0 1 0 -1.57
