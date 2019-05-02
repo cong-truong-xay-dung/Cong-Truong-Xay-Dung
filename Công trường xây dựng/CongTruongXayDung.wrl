@@ -238,8 +238,8 @@ Transform {		#Xe trộn bê tông
 	children [Inline {url ["./Xe tron be tong/maytronbetong.wrl"]}]
 }
 Transform {		#Cần cẩu
-	rotation 0 1 0 -1.57
-	translation	-33 -12.1 -80  
+	rotation 0 1 0 3.14
+	translation	-33 -12.1 -82  
 	children [Inline {url ["./Cần cẩu/cancau.wrl"]}]
 }
 Transform {		#Xe lu			
@@ -267,11 +267,17 @@ Transform {		#Cần trục
 	scale 1.5 1.5 1.5
 	children [Inline {url ["./cần trục/cantruc.wrl"]}]
 }
-Transform {		#Công nhân
+Transform {		#Công nhân chuyển gạch
 	translation	45 -10.7 -33
 	scale 3 3 3
 	children [Inline {url ["./người/cong-nhan.wrl"]}]
-}	  
+}	 
+Transform {		#Công nhân chuyển xi măng
+	rotation 0 1 0 1.57
+	translation	-21 -10.7 -50
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan1.wrl"]}]
+} 
 Transform {		#Bảo vệ
 	translation	-15 -10.8 2
 	rotation 0 1 0 -1.57

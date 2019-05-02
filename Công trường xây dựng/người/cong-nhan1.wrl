@@ -481,17 +481,24 @@ DEF tgdcqd TimeSensor {
 	loop TRUE
 }
 #quãng đường người di chuyển 
-DEF qddc PositionInterpolator {
-	key [0 0.5  1]
-	keyValue [0 0 -11, 0 0 0, 0 0 -11]
+DEF qddc PositionInterpolator {	
+	key [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [0 0 -8, 0 0 -2,
+			3 0 -2,6 0 -2,	  
+			8 0 -2,8 0 1,	     
+		    8 0 -2,6 0 -2,		
+		    3 0 -2, 0 0 -2,	   
+			0 0 -8]
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO congnhan.set_translation 
 
 #góc quay của người
 DEF xoaynguoi  OrientationInterpolator {
-	key [0 0.1 0.2 0.3 0.4 0.5 0.53 0.6 0.7 0.8 0.9,0.99 1]
-	keyValue [ 0 1 0 0, 0 1 0 0 , 0 1 0 0,0 1 0 0, 0 1 0 0 , 0 1 0 0, 0 1 0 3.14, 0 1 0 3.14,0 1 0 3.14, 0 1 0 3.14 ,0 1 0 3.14 , 0 1 0 3.14, 0 1 0 3.14]
+	key [0 0.1 0.12 0.2 0.38 0.4 0.5  0.52 0.6 0.65 0.7 0.8 0.88 0.9 0.99 1]
+	keyValue [ 0 1 0 0, 0 1 0 0 ,0 1 0 1.57, 0 1 0 1.57,0 1 0 1.57, 0 1 0 0 , 0 1 0 0,0 1 0 3.14,
+	    0 1 0 3.14,0 1 0 -1.57,0 1 0 -1.57, 0 1 0 -1.57 ,0 1 0 -1.57,0 1 0 3.14 , 0 1 0 3.14, 0 1 0 3.14]
+	
 }
 ROUTE tgdcqd.fraction_changed TO xoaynguoi.set_fraction
 ROUTE xoaynguoi.value_changed TO congnhan.set_rotation

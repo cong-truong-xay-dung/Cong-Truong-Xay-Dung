@@ -477,13 +477,13 @@ ROUTE InterLeftLeg&RightHand.value_changed	TO chanTrai.rotation
 ROUTE InterRightLeg&LeftHand.value_changed TO chanPhai.rotation
 
 DEF tgdcqd TimeSensor {
-	cycleInterval 18
+	cycleInterval 14
 	loop TRUE
 }
 #quãng đường người di chuyển 
 DEF qddc PositionInterpolator {
 	key [0 0.5  1]
-	keyValue [0 0 -11, 0 0 0, 0 0 -11]
+	keyValue [0 0 -11, 0 0 0, 0 0 -11]	   
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO congnhan.set_translation 
