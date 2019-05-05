@@ -59,7 +59,7 @@ DEF	donggach Transform {
 		Transform { translation	0 0 2
 			children [USE g]
 		}
-		 Transform { translation	0 0 -2
+		Transform { translation 0 0 -2
 			children [USE g]
 		}
 		Transform { translation	0 1 1
@@ -79,7 +79,7 @@ DEF tgdcqd TimeSensor {
 	loop TRUE
 }
 DEF tggdc TimeSensor {
-	cycleInterval 10
+	cycleInterval 20
 	loop TRUE
 }
 #quãng đường người di chuyển 
@@ -89,8 +89,9 @@ DEF qddc PositionInterpolator {
 }
 #quãng đường gạch di chuyển 
 DEF qdgdc PositionInterpolator {
-	key [0 0.3 0.5 1]
-	keyValue [22 -2.9 0,22 -2.9 0, -1 -2.9 0]
+	key [0 0.1 0.2 0.3 0.4 0.5 0.6 1]
+	keyValue [22 -2.9 0,22 -2.9 0,14.6 -2.9 0, 7.2 -2.9 0,-1 -2.9 0,-9.5 -2.9 0,-10 -2.9 0
+		-10 -2.9 0]
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO xeui.set_translation

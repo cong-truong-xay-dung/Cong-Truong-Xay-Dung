@@ -9,10 +9,10 @@ DEF	timer TimeSensor {
 	loop TRUE
 	enabled TRUE
 }		
-DEF dongcat Transform {
+DEF dongvua Transform {
 	scale 0.2 0 0.5  
 	translation	60 -1.4 -5
-	children Inline	{url "dongcat.wrl"}
+	children Inline	{url "dongvua.wrl"}
 }
 		
 
@@ -36,4 +36,4 @@ DEF co  PositionInterpolator {
 	keyValue [ 0.2 0 0.5, 0.2 0 0.5, 0.2 0 0.5, 0.2 1 0.5]
 }
 ROUTE timer.fraction_changed TO co.set_fraction	
-ROUTE co.value_changed TO dongcat.set_scale	 
+ROUTE co.value_changed TO dongvua.set_scale	 

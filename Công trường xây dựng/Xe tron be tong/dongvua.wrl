@@ -5,8 +5,8 @@ Transform {   scale 4 1.5 0.8
 		Shape {
 
             appearance Appearance {
-                material Material { diffuseColor 0 0 0}
-				texture	ImageTexture {url "cat.jpg"}
+                #material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "../dongvua.jpg"}
             }
 
             geometry ElevationGrid {	 
