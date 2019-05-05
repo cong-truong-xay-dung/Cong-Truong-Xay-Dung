@@ -4,6 +4,20 @@ Background {
 	skyAngle [ 0.1, 0.1, 0.2, 1.4, 1.7 ]	
 	skyColor [ 1 0 0, .9 .9 .5, .7 .7 .9, 0 0.4 1, 0 0.7 1,0.1 0.6 0 ]		
 }
+Sound {
+	source DEF sound AudioClip {
+		url	["sound.mp3"]
+		loop TRUE	
+	}
+	 minFront 140 #vung nghe ro
+     minBack  140
+     maxFront 140	#vung khong nghe
+     maxBack  140
+     location -60 30 -60 #vi tri phat
+}
+
+#ROUTE sound.startTime TO sound.startTime
+
 NavigationInfo {
 	avatarSize [1 1.8 2.3]
 }
