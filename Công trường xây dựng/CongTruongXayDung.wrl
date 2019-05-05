@@ -240,7 +240,8 @@ Transform {		#Hàng xe rùa
 	]
 }
 Transform {		#Xe trộn bê tông
-	translation	-30 -14.3 -20
+	translation	-35 -14.3 -70
+	rotation 0 1 0 -1.57
 	scale .9 .9 .9
 	children [Inline {url ["./Xe tron be tong/maytronbetong.wrl"]}]
 }
@@ -286,7 +287,7 @@ Transform {		#Công nhân chuyển xi măng
 	children [Inline {url ["./người/cong-nhan1.wrl"]}]
 } 
 Transform {		#Bảo vệ
-	translation	-15 -10.8 2
+	translation	-15 -10.8 3
 	rotation 0 1 0 -1.57
 	scale 3 3 3
 	children [Inline {url ["./người/BaoVe.wrl"]}]

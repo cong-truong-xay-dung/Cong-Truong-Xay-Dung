@@ -20,9 +20,7 @@ DEF	banh Transform
 			appearance Appearance {
 				material Material {
 					diffuseColor 0 0 0
-					specularColor .72 .72 .72
-					ambientIntensity 0
-					shininess .18
+					
 				}
 				texture ImageTexture	{url "lop.jpg"}
 			}
@@ -35,10 +33,7 @@ DEF	banh Transform
 			appearance Appearance {
 				material Material {
 					diffuseColor .5 .35 .07
-					specularColor .82 .93 .81
-					emissiveColor .13 .13 .13
-					ambientIntensity .06
-					shininess .07
+					
 				}
 				texture ImageTexture	{url "vanh.jpg"}
 			}
@@ -58,10 +53,7 @@ DEF	truc Transform {
 			appearance Appearance {
 				material Material {
 					diffuseColor .5 .33 .21
-					specularColor .76 .73 .23
-					emissiveColor .14 .09 .06
-					ambientIntensity .0667
-					shininess .07
+					
 				}
 			}
 		}
@@ -104,10 +96,7 @@ Transform {
 			appearance Appearance {
 				material Material {
 					diffuseColor .5 .35 .07
-					specularColor .82 .93 .81
-					emissiveColor .13 .13 .13
-					ambientIntensity .06
-					shininess .07
+					
 				}
 
 			}
@@ -126,10 +115,7 @@ Transform {
 			appearance Appearance {
 				material Material {
 					diffuseColor .5 .35 .07
-					specularColor .82 .93 .81
-					emissiveColor .13 .13 .13
-					ambientIntensity .06
-					shininess .07
+					
 				}
 
 			}
@@ -416,70 +402,20 @@ Transform {
 }
 
 
-	
- 
-
-
-
-#thungxe
-Transform {
-	
-	translation	3 3.2 0.5
-	children [
-		Shape {
-			geometry Box {
-				size 9.5 3.8 0.5
-			}
-			appearance Appearance {
-				material Material {
-					diffuseColor .8 .51 .09
-					specularColor .92 .43 .01
-					ambientIntensity .117
-					shininess .4
-				}
-			}
-		}
-	]}
-
-	Transform {
-	
-	translation	3 3.2 5.5
-	children [
-		Shape {
-			geometry Box {
-				size 9.5 3.8 0.5
-			}
-			appearance Appearance {
-				material Material {
-					diffuseColor .8 .51 .09
-					specularColor .92 .43 .01
-					ambientIntensity .117
-					shininess .4
-				}
-			}
-		}
-	]}
-
-	Transform {
-	
-	translation	-1.5 3.2 3
-	children [
-		Shape {
-			geometry Box {
-				size 0.5 3.8 5
-			}
-			appearance Appearance {
-				material Material {
-					diffuseColor .8 .51 .09
-					specularColor .92 .43 .01
-					ambientIntensity .117
-					shininess .4
-				}
-			}
-		}
-	]}
-
-
+DEF	thungxe Transform{
+	children Inline	{url "thungxe.wrl"}
+}
+DEF	timer TimeSensor {
+	cycleInterval 10
+	loop TRUE
+	enabled TRUE
+}
+DEF xoay  OrientationInterpolator {
+	key [0 0.4 0.5 0.6 1]
+	keyValue [ 0 0 1 0,0 0 1 0,0 0 1 0.52,0 0 1 0 ]
+}
+ROUTE timer.fraction_changed TO xoay.set_fraction	
+ROUTE xoay.value_changed TO thungxe.set_rotation
 
 
 #chanbun
@@ -497,10 +433,7 @@ DEF	 chanbun Transform {
 					appearance Appearance {
 						material Material {
 							diffuseColor .5 .35 .07
-							specularColor .82 .93 .81
-							emissiveColor .13 .13 .13
-							ambientIntensity .06
-							shininess .07
+							
 						}
 					}
 				}
@@ -518,10 +451,7 @@ DEF	 chanbun Transform {
 					appearance Appearance {
 						material Material {
 							diffuseColor .5 .35 0
-							specularColor .76 .74 .59
-							emissiveColor .12 .12 .12
-							ambientIntensity .0567
-							shininess .07
+							
 						}
 					}
 				}
@@ -539,10 +469,7 @@ DEF	 chanbun Transform {
 					appearance Appearance {
 						material Material {
 							diffuseColor .5 .35 0
-							specularColor .76 .74 .59
-							emissiveColor .12 .12 .12
-							ambientIntensity .0567
-							shininess .07
+							
 						}
 					}
 				}
