@@ -50,6 +50,7 @@ DEF	xeui Transform {
 			translation	-1 0 0
 			children [Inline {url "luoiui.wrl"}]
 		}
+		
 	]
 }
 
