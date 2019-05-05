@@ -54,7 +54,7 @@ DEF	xeui Transform {
 }
 
 DEF	donggach Transform {
-	translation	-20 -2.5 0
+	translation	22 -2.9 0
 	children [ DEF g Inline {url ["../gạch/it-gach.wrl"]}
 		Transform { translation	0 0 2
 			children [USE g]
@@ -75,28 +75,32 @@ DEF	donggach Transform {
 }
 
 DEF tgdcqd TimeSensor {
-	cycleInterval 14
+	cycleInterval 20
+	loop TRUE
+}
+DEF tggdc TimeSensor {
+	cycleInterval 10
 	loop TRUE
 }
 #quãng đường người di chuyển 
 DEF qddc PositionInterpolator {
 	key [0 0.5  1]
-	keyValue [22 0 0, 0 0 0, 22 0 0]
+	keyValue [40 0 0, 0 0 0, 40 0 0]
 }
 #quãng đường gạch di chuyển 
 DEF qdgdc PositionInterpolator {
-	key [0 0.5  1]
-	keyValue [26 0 0, 0 0 0, 0 0 0]
+	key [0 0.3 0.5 1]
+	keyValue [22 -2.9 0,22 -2.9 0, -1 -2.9 0]
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO xeui.set_translation
 
-ROUTE tgdcqd.fraction_changed TO qdgdc.set_fraction	
+ROUTE tggdc.fraction_changed TO qdgdc.set_fraction	
 ROUTE qdgdc.value_changed TO donggach.set_translation
 
 #góc quay của người
 DEF xoaynguoi  OrientationInterpolator {
-	key [0 0.1 0.2 0.3 0.4 0.5 0.53 0.6 0.7 0.8 0.9,0.99 1]
+	key [0 0.1 0.2 0.3 0.4 0.5 0.53 0.6 0.7 0.8 0.9,0.98 1]
 	keyValue [ 0 1 0 0, 0 1 0 0 , 0 1 0 0,0 1 0 0, 0 1 0 0 , 0 1 0 0, 0 1 0 3.14, 0 1 0 3.14,0 1 0 3.14, 0 1 0 3.14 ,0 1 0 3.14 , 0 1 0 3.14, 0 1 0 3.14]
 }
 ROUTE tgdcqd.fraction_changed TO xoaynguoi.set_fraction
