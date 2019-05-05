@@ -284,6 +284,12 @@ Transform {		#Công nhân chuyển gạch
 	translation	8.5 19.2 -38.5
 	scale 2.3 2.3 2.3
 	children [Inline {url ["./người/cong-nhan5.wrl"]}]	
+}
+Transform {		#Công nhân chuyển gạch
+	translation	-5.5 7.2 -53.5
+	rotation 0 1 0 -3.14
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan5.wrl"]}]	
 }	 
 Transform {		#Công nhân chuyển xi măng
 	rotation 0 1 0 1.57
