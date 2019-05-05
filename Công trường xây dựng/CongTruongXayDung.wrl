@@ -240,7 +240,8 @@ Transform {		#Hàng xe rùa
 	]
 }
 Transform {		#Xe trộn bê tông
-	translation	-30 -14.3 -20
+	translation	-35 -14.3 -70
+	rotation 0 1 0 -1.57
 	scale .9 .9 .9
 	children [Inline {url ["./Xe tron be tong/maytronbetong.wrl"]}]
 }

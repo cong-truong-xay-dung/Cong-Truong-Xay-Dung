@@ -17,19 +17,8 @@ DEF	dongcat Transform {
 		geometry Box {size 32 1 5}
 	}
 }
-DEF click TouchSensor {enabled TRUE }
-DEF	timer TimeSensor {
-			cycleInterval 5
-			loop FALSE
-			enabled FALSE
-		
-		}
-DEF	timer1 TimeSensor {
-			cycleInterval 4
-			loop FALSE
-			enabled FALSE
-			
-		}
+
+
 DEF	timer2 TimeSensor {
 	cycleInterval 14
 	loop TRUE
@@ -43,72 +32,8 @@ DEF	catlun PositionInterpolator {
 				
 			}
 
-DEF	tien PositionInterpolator {
-				key [0 0.5 1]
-				keyValue [0 0 0,0 0 -30,0 0 -35]
-			}
-DEF	lui PositionInterpolator {
-				key [0 0.5 1]
-				keyValue [0 0 -35,0 0 -30,0 0 0]
-			}
-DEF ma Script {
 
-		eventIn SFBool turnOn
-
-		eventOut SFBool On
-
-		eventOut SFBool Off
-
-		field SFBool turn FALSE
-
-		url "javascript:
-
-		function turnOn(val){
-
-		if(val){
-
-		turn = !turn;
-
-		if(turn)
-
-				{
-
-					On= TRUE;
-
-                     Off=FALSE;
-
-            		}
-
-        		else
-
-        		{
-
-                    On=FALSE;
-
-					Off=TRUE;
-
-        		}
-
-            		}
-
-    		}
-
-    		"
-}
-
-
-
-ROUTE click.isActive TO	ma.turnOn
-
-ROUTE ma.On	TO timer.enabled
-ROUTE ma.Off TO timer1.enabled
-
-
-ROUTE timer.fraction_changed TO	tien.set_fraction
-ROUTE timer1.fraction_changed TO lui.set_fraction
 ROUTE timer2.fraction_changed TO catlun.set_fraction
 
 ROUTE catlun.value_changed TO dongcat.set_scale
 
-ROUTE tien.value_changed TO xelu.translation
-ROUTE lui.value_changed TO xelu.translation
