@@ -451,6 +451,33 @@ DEF	congnhan Transform {
 					loop TRUE
 				}
 		
+				Transform {
+					rotation 1 0 0 0.44
+					scale 0.95 0.95 .95
+					translation	0 0.13 0.5
+					children [
+					   	DEF	gach2 Transform	{ rotation 0 1 0 -1.57
+								scale 0.2 .2 .2
+							translation	0.02 -0.6 0.85
+							children [Inline {
+									url	["../gạch/it-gach.wrl"]
+								}]
+							}]
+				}
+				Transform {
+					rotation 1 0 0 0.44
+					scale 0.95 0.95 .95
+					translation	0 0.13 0.5
+					children [
+					   	DEF	gach1 Transform	{ rotation 0 1 0 -1.57
+								scale 0.2 .2 .2
+							translation	0.05 -0.7 0.85
+							children [Inline {
+									url	["../gạch/it-gach.wrl"]
+								}]
+							}]
+				}
+
 				Transform {	rotation 1 0 0 0.44
 					scale 0.95 0.95 .95
 					translation	0 0.13 0.5
@@ -463,6 +490,7 @@ DEF	congnhan Transform {
 								}]
 						}
 					]
+					
 				}
 		
 			]

@@ -464,7 +464,20 @@ DEF	congnhan Transform {
 						}
 					]
 				}
-		
+				Transform { translation	0 -0.7 0.95
+					scale .3 .4 .3
+					rotation 0 1 0 1.57
+					children [
+						Transform { rotation 0 0 1 0.4
+							children [Inline {url ["../kho xi măng/bao_xi_mang.wrl"]}]
+						}
+						Transform {	rotation 0 0 1 0.4
+							translation	0 -0.3 0
+							children [Inline {url ["../kho xi măng/bao_xi_mang.wrl"]}
+							]
+						}
+					]
+				}
 			]
 		}
 	]
