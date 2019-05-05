@@ -172,7 +172,7 @@ DEF ma Script {
 }
 
 DEF	bxm Transform {
-	translation	17 0 0
+	translation	17 0 -1
 	children [Inline {url ["../kho xi măng/mot-it-ximang.wrl"]}]
 }
 
