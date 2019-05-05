@@ -208,6 +208,10 @@ DEF xm Transform {		#Một ít xi măng
 Transform { translation	20 0.7 25
 	children [USE xm]
 }
+Transform { translation	10 15.9 7
+	scale 0.8 0.8 0.8
+	children [USE xm]
+}
 Transform {		#Hàng xe rùa   
 	children [	  
 		DEF xerua Transform {	 rotation 0 1 0 1.57
@@ -292,6 +296,12 @@ Transform {		#Công nhân bê xi măng
 	translation	0 -10.7 -20
 	scale 3 3 3
 	children [Inline {url ["./người/cong-nhan3.wrl"]}]
+}
+Transform {		#Công nhân bê xi măng
+	rotation 0 1 0 -1.57
+	translation	-32 -10.7 -23
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan4.wrl"]}]
 }
 Transform {		#Công nhân cầm búa
 	rotation 0 1 0 -1.57
