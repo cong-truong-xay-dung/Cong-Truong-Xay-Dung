@@ -1,9 +1,21 @@
 #VRML V2.0 utf8
 #VRML V2.0 utf8
 
-DEF	xelu Transform {
+DEF	xelu Transform { 
+	translation	0 0 -12
 	rotation 0 1 0 -1.57
 	children [Inline {url "xelu.wrl"}]
+}
+DEF	dongcat Transform {
+	translation	 15 -2.5 -15
+	rotation 0 1 0 -1.57
+	center -15 0 0
+	children Shape {
+		appearance  Appearance {
+			texture ImageTexture {url "cat.jpg"}
+		}
+		geometry Box {size 32 1 5}
+	}
 }
 DEF click TouchSensor {enabled TRUE }
 DEF	timer TimeSensor {
@@ -18,6 +30,19 @@ DEF	timer1 TimeSensor {
 			enabled FALSE
 			
 		}
+DEF	timer2 TimeSensor {
+	cycleInterval 14
+	loop TRUE
+	enabled TRUE
+	
+}
+
+DEF	catlun PositionInterpolator {
+				key [0 0.5 1]
+				keyValue [1 1 1,0 1 1,0 1 1]
+				
+			}
+
 DEF	tien PositionInterpolator {
 				key [0 0.5 1]
 				keyValue [0 0 0,0 0 -30,0 0 -35]
@@ -69,15 +94,21 @@ DEF ma Script {
     		}
 
     		"
-
 }
 
+
+
 ROUTE click.isActive TO	ma.turnOn
+
 ROUTE ma.On	TO timer.enabled
 ROUTE ma.Off TO timer1.enabled
-ROUTE click.touchTime TO timer.startTime
-ROUTE click.touchTime TO timer1.startTime
+
+
 ROUTE timer.fraction_changed TO	tien.set_fraction
 ROUTE timer1.fraction_changed TO lui.set_fraction
+ROUTE timer2.fraction_changed TO catlun.set_fraction
+
+ROUTE catlun.value_changed TO dongcat.set_scale
+
 ROUTE tien.value_changed TO xelu.translation
 ROUTE lui.value_changed TO xelu.translation
