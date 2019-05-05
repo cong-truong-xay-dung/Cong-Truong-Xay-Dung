@@ -112,76 +112,78 @@ DEF	trucquay Transform {
 			rotation 0 1 0 3.14
 			children [Inline {url "hop.wrl"}]
 		}
+
 	]
 }
 
-DEF click TouchSensor {enabled TRUE }
+
 DEF	timer TimeSensor {
-	cycleInterval 5
-	loop FALSE
-	enabled FALSE
-	
-}
-DEF	timer1 TimeSensor {
-	cycleInterval 5
-	loop FALSE
-	enabled FALSE
+	cycleInterval 20
+	loop TRUE
+	enabled TRUE
 	
 }
 DEF	quay1 OrientationInterpolator {
-	key [0 0.5 1]
-	keyValue [0 1 0 0,0 1 0 3.14,0 1 0 6.28]
-}
-DEF	quay2 OrientationInterpolator {
-	key [0 0.5 1]
-	keyValue [ 0 1 0 0,0 1 0 -3.14,0 1 0 -6.28]
-}
-DEF ma Script {
-
-	eventIn SFBool turnOn
-
-	eventOut SFBool On
-
-	eventOut SFBool Off
-
-	field SFBool turn FALSE
-
-	url "javascript:
-
-	function turnOn(val){
-
-		if(val){
-
-			turn = !turn;
-
-			if(turn)
-
-			{	  
-				On= TRUE;  
-                Off=FALSE;
-			}
-			else
-			{
-				On=FALSE;
-				Off=TRUE;  
-        	}  	
-		}
-
-    }"
-
+	key [0 0.5 0.6 0.7  1]
+	keyValue [0 1 0 1.65 , 0 1 0 1.65 , 0 1 0 1.65 , 0 1 0 1.65 , 0 1 0 0 ]
 }
 
-DEF	bxm Transform {
-	translation	17 0 -1
-	children [Inline {url ["../kho xi măng/mot-it-ximang.wrl"]}]
-}
+ROUTE timer.fraction_changed TO	quay1.set_fraction 
 
-ROUTE click.isActive TO	ma.turnOn
-ROUTE ma.On	TO timer.enabled
-ROUTE ma.Off TO timer1.enabled
-ROUTE click.touchTime TO timer.startTime
-ROUTE click.touchTime TO timer1.startTime
-ROUTE timer.fraction_changed TO	quay1.set_fraction
-ROUTE timer1.fraction_changed TO quay2.set_fraction
 ROUTE quay1.value_changed TO trucquay.rotation
-ROUTE quay2.value_changed TO trucquay.rotation
+#bao xi mang
+DEF	bxm Transform {
+
+	translation	15 0 -1
+	children [
+	Inline {url ["../kho xi măng/mot-it-ximang.wrl"]}	 
+	]
+}
+DEF	timer1 TimeSensor {
+	cycleInterval 20
+	loop TRUE
+	enabled TRUE
+}
+DEF	dcxi PositionInterpolator {
+	key	[0  0.5 0.7  1]
+	keyValue [15 0 -1 , 15 0 -1 , 15 35 -1 , 1 35 15 ]
+}
+ROUTE timer1.fraction_changed TO dcxi.set_fraction
+ROUTE dcxi.value_changed TO	bxm.translation
+
+#dc dây
+DEF	day Transform {
+		translation	15 22 -1
+	center 0 20 0
+	children [Shape {
+		geometry Cylinder {
+			height 40
+			radius 0.05
+
+		}
+		appearance Appearance {
+			texture	ImageTexture {
+				url	["../thep.jpg"]
+			}
+		}
+	}]
+}
+DEF	timer2 TimeSensor {
+	cycleInterval 20
+	loop TRUE
+	enabled TRUE
+}
+
+DEF	dcday PositionInterpolator {
+	key	[0  0.5 0.7  1 ]
+	keyValue [1 1 1, 1 1 1 , 1 0.15 1 , 1 0.15 1 ]
+}
+DEF	dclenday PositionInterpolator {
+	key	[0  0.5 0.7  1]
+	keyValue [15 21 -1 , 15 21 -1 , 15 21 -1 , 1 21 15 ]
+}
+ROUTE timer2.fraction_changed TO dcday.set_fraction
+ROUTE timer2.fraction_changed TO dclenday.set_fraction
+ROUTE dcday.value_changed TO day.set_scale
+ROUTE dclenday.value_changed TO	day.translation
+
