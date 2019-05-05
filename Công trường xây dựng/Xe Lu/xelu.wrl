@@ -50,7 +50,7 @@ DEF tgdcqd TimeSensor {
 #quãng đường người di chuyển 
 DEF qddc PositionInterpolator {
 	key [0 0.5  1]
-	keyValue [18 0 0, 0 0 0, 18 0 0]
+	keyValue [30 0 0, 0 0 0, 30 0 0]
 }
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
 ROUTE qddc.value_changed TO xelu.set_translation 
