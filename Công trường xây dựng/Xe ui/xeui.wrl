@@ -49,8 +49,28 @@ DEF	xeui Transform {
 		Transform {
 			translation	-1 0 0
 			children [Inline {url "luoiui.wrl"}]
+		} 
+	]
+}
+
+DEF	donggach Transform {
+	translation	-20 -2.5 0
+	children [ DEF g Inline {url ["../gạch/it-gach.wrl"]}
+		Transform { translation	0 0 2
+			children [USE g]
 		}
-		
+		 Transform { translation	0 0 -2
+			children [USE g]
+		}
+		Transform { translation	0 1 1
+			children [USE g]
+		}
+		Transform { translation	0 1 -1
+			children [USE g]
+		}
+		Transform { translation	0 2 0 
+			children [USE g]
+		}
 	]
 }
 
@@ -63,8 +83,16 @@ DEF qddc PositionInterpolator {
 	key [0 0.5  1]
 	keyValue [22 0 0, 0 0 0, 22 0 0]
 }
+#quãng đường gạch di chuyển 
+DEF qdgdc PositionInterpolator {
+	key [0 0.5  1]
+	keyValue [26 0 0, 0 0 0, 0 0 0]
+}
 ROUTE tgdcqd.fraction_changed TO qddc.set_fraction	
-ROUTE qddc.value_changed TO xeui.set_translation 
+ROUTE qddc.value_changed TO xeui.set_translation
+
+ROUTE tgdcqd.fraction_changed TO qdgdc.set_fraction	
+ROUTE qdgdc.value_changed TO donggach.set_translation
 
 #góc quay của người
 DEF xoaynguoi  OrientationInterpolator {

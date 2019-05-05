@@ -23,5 +23,18 @@ Transform {
 		DEF	be Transform {
 			children [Inline {url "canmuc.wrl"}]
 		}
+		
 	]
 }
+DEF	timer TimeSensor {
+	cycleInterval 10
+	loop TRUE
+	enabled TRUE
+}
+
+DEF xoay  OrientationInterpolator {
+	key [0 0.1 0.2 0.51 0.7 0.97 1]
+	keyValue [ 0 1 0 0 ,0 1 0 1,0 1 0 1,0 1 0 0]
+}
+ROUTE timer.fraction_changed TO xoay.set_fraction
+ROUTE xoay.value_changed TO be.set_rotation 

@@ -43,7 +43,7 @@ DEF banh4 Transform {
 				key[0.0,0.5,1.0]
 				keyValue[0 1 0 0,0 1 0 3.14,0 1 0 6.28]
 			}
-ROUTE click.isActive TO	clock.enabled
+
 ROUTE clock.fraction_changed TO	quay.set_fraction
 ROUTE quay.value_changed TO	banh1.rotation
 ROUTE quay.value_changed TO	banh2.rotation
