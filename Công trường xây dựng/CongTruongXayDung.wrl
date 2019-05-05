@@ -199,11 +199,14 @@ Transform {		#Kho xi măng
 	scale 2.5 2.5 2.5
 	children [Inline {url ["./kho xi măng/kho_xi_mang.wrl"]}]
 }
-Transform {		#Một ít xi măng
+DEF xm Transform {		#Một ít xi măng
 	rotation 0 1 0 1.57
 	translation	-12 -14.5 -73
 	scale 2.5 2.5 2.5
 	children [Inline {url ["./kho xi măng/mot-it-ximang.wrl"]}]
+}
+Transform { translation	20 0.7 25
+	children [USE xm]
 }
 Transform {		#Hàng xe rùa   
 	children [	  
@@ -284,9 +287,52 @@ Transform {		#Bảo vệ
 	scale 3 3 3
 	children [Inline {url ["./người/BaoVe.wrl"]}]
 }
-Transform {		#Công nhân chuyển gạch
-	translation	0 -10.7 -10
+Transform {		#Công nhân bê xi măng
+	rotation 0 1 0 -1.57
+	translation	0 -10.7 -20
 	scale 3 3 3
-	children [Inline {url ["./người/cong-nhan.wrl"]}]
+	children [Inline {url ["./người/cong-nhan3.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 -1.57
+	translation	-8 38.3 -36.1
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 1.57
+	translation	8.6 38.3 -43.6
+	scale 3 3 3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 1.57
+	translation	2.3 25.3 -43.6
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 1.57
+	translation	8.9 25.3 -51
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 -3.14
+	translation	-10 25.3 -55.5
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 -1.57
+	translation	5.7 13.3 -35.8
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
+}
+Transform {		#Công nhân cầm búa
+	rotation 0 1 0 1.57
+	translation	-4.7 13.3 -43.6
+	scale 2.3 2.3 2.3
+	children [Inline {url ["./người/cong-nhan2.wrl"]}]
 }
 #end Bên trong

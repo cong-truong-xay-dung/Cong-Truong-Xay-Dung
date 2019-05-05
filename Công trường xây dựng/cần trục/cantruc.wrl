@@ -114,6 +114,7 @@ DEF	trucquay Transform {
 		}
 	]
 }
+
 DEF click TouchSensor {enabled TRUE }
 DEF	timer TimeSensor {
 	cycleInterval 5
@@ -170,7 +171,10 @@ DEF ma Script {
 
 }
 
-
+DEF	bxm Transform {
+	translation	17 0 0
+	children [Inline {url ["../kho xi măng/mot-it-ximang.wrl"]}]
+}
 
 ROUTE click.isActive TO	ma.turnOn
 ROUTE ma.On	TO timer.enabled

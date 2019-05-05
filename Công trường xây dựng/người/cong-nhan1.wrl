@@ -477,7 +477,7 @@ ROUTE InterLeftLeg&RightHand.value_changed	TO chanTrai.rotation
 ROUTE InterRightLeg&LeftHand.value_changed TO chanPhai.rotation
 
 DEF tgdcqd TimeSensor {
-	cycleInterval 18
+	cycleInterval 20
 	loop TRUE
 }
 #quãng đường người di chuyển 
