@@ -135,14 +135,7 @@ Transform {
 #Thân
 Transform {
 	children Shape {
-		appearance Appearance {	material Material {diffuseColor 0.6         0.9        0.196078 
-			}
-			#			texture	ImageTexture {
-			#				url	[""]
-			#			}
-			#			textureTransform TextureTransform {
-			#				scale 5 5
-			#			}
+		appearance Appearance {	material Material {diffuseColor 0.6         0.9        0.196078}
 		}
 		geometry Extrusion {
 			crossSection [-0.22 0.08,0.22 0.08,0.22 -0.08,-0.22 -0.08 -0.22 0.08]
@@ -155,10 +148,7 @@ Transform {
 #Hông
 Transform {
 	children Shape {
-		appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }
-			texture	ImageTexture {
-				url	"image/HoaVan1.jpg"
-			}
+		appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }	
 			textureTransform TextureTransform {
 				scale 5 5
 			}
@@ -180,10 +170,7 @@ DEF chanTrai Transform {
 					#Đùi
 					children [
 						DEF dui Shape {
-							appearance Appearance {	material Material {diffuseColor 0.03   0.18  0.33 }
-								texture ImageTexture	{
-									url "image/HoaVan1.jpg"
-								}
+							appearance Appearance {	material Material {diffuseColor 0.03   0.18  0.33 }	
 							}
 							geometry	Extrusion {
 								crossSection	[-0.004 0.2505,
@@ -219,10 +206,7 @@ DEF chanTrai Transform {
 				#Bắp Chân
 				Transform	{
 					children DEF bapChan Shape {
-						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }
-							texture ImageTexture	{
-								url "image/HoaVan1.jpg"
-							}
+						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 } 
 						}
 						geometry Extrusion {
 							crossSection [-0.004 0.2505,
@@ -257,10 +241,7 @@ DEF chanTrai Transform {
 				#Khớp chân
 				Transform	{
 					children Shape {
-						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }
-							texture ImageTexture	{
-								url "image/HoaVan1.jpg"
-							}
+						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 } 
 						}
 						geometry Sphere	{
 							radius 0.04
@@ -309,12 +290,6 @@ DEF	tayTrai Transform {
 				Transform {
 					children Shape {
 						appearance Appearance {	  material Material	{diffuseColor 0.0         0.8078     0.8186  }
-							#							texture	ImageTexture {
-							#								url	"image/HoaVan.jpg"
-							#							}
-							#							textureTransform TextureTransform {
-							#								scale 5 5
-							#							}
 						}
 						geometry Sphere	{
 							radius 0.07
@@ -324,10 +299,7 @@ DEF	tayTrai Transform {
 				#Bắp Tay
 				Transform {
 					children Shape {
-						appearance Appearance {	  material Material	{diffuseColor 0.0         0.8078     0.8186  }
-							texture	ImageTexture {
-								url	"image/HoaVan.jpg"
-							}
+						appearance Appearance {	  material Material	{diffuseColor 0.0         0.8078     0.8186  } 
 							textureTransform TextureTransform {
 								scale 5 5
 							}
@@ -363,10 +335,7 @@ DEF	tayTrai Transform {
 				#Khớp tay
 				Transform {
 					children Shape {
-						appearance Appearance {	 material Material	{diffuseColor 0.0         0.8078     0.8186  }
-							texture	ImageTexture {
-								url	"image/HoaVan.jpg"
-							}
+						appearance Appearance {	 material Material	{diffuseColor 0.0         0.8078     0.8186  } 
 							textureTransform TextureTransform {
 								scale 5 5
 							}
@@ -381,10 +350,7 @@ DEF	tayTrai Transform {
 				#Tay dưới
 				Transform {
 					children Shape {
-						appearance Appearance {	  material Material	{diffuseColor 0.0         0.8078     0.8186  }
-							texture	ImageTexture {
-								url	"image/HoaVan.jpg"
-							}
+						appearance Appearance {	  material Material	{diffuseColor 0.0         0.8078     0.8186  }	
 							textureTransform TextureTransform {
 								scale 5 5
 							}

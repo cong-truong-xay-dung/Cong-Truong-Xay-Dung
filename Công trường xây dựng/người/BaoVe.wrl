@@ -171,14 +171,6 @@ DEF baoVe Transform {
 		Transform {
 			children Shape {
 				appearance Appearance {	material Material{diffuseColor 0.85        0.85       0.95 }
-					#			texture	ImageTexture {
-					#				url	["ao-bao-ve.jpg"]
-					#			}
-					#			textureTransform TextureTransform {
-					#				scale 1 1
-					#				rotation 3.1415
-					#				translation 0.31 0
-					#			}
 				}
 				geometry Extrusion {
 					crossSection [-0.22 0.08,0.22 0.08,0.22 -0.08,-0.22 -0.08 -0.22 0.08]

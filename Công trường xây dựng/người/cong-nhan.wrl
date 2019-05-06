@@ -179,10 +179,7 @@ DEF	congnhan Transform {
 				#Hông
 				Transform {
 					children Shape {
-						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }				 
-							textureTransform TextureTransform {
-								scale 5 5
-							}
+						appearance Appearance {	 material Material {diffuseColor 0.03   0.18  0.33 }
 						}
 						geometry Extrusion {
 							crossSection [-0.15 0.05,0.15 0.05,0.15 -0.05,-0.15 -0.05 -0.15 0.05]
